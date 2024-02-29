@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"gonum.org/v1/hdf5"
+	"gitlab.com/sintela/hdf5"
 )
 
 const (

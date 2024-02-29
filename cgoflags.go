@@ -10,4 +10,5 @@ package hdf5
 // #cgo linux,!arm64 LDFLAGS: -lhdf5_x86 -lhdf5_hl_x86 -lsz_x86
 // #cgo linux,arm64 LDFLAGS: -lhdf5_arm64 -lhdf5_hl_arm64 -lsz_arm64
 // #include "hdf5.h"
+// #include "hdf5_hl.h"
 import "C"

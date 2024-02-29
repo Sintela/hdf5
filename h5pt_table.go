@@ -16,7 +16,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"gonum.org/v1/hdf5/cmem"
+	"gitlab.com/sintela/hdf5/cmem"
 )
 
 // Table is an hdf5 packet-table.
