@@ -4,8 +4,8 @@
 
 package hdf5
 
-// #cgo LDFLAGS:  -L/usr/local/lib -Llib -lz
-// #cgo CFLAGS: -Iinclude -I/usr/local/include
+// #cgo LDFLAGS:  -L/usr/local/lib -L./lib -lz
+// #cgo CFLAGS: -I./include -I/usr/local/include
 // #cgo darwin LDFLAGS: -lhdf5_darwin -lhdf5_hl_darwin -lsz_darwin
 // #cgo linux,!arm64 LDFLAGS: -lhdf5_x86 -lhdf5_hl_x86 -lsz_x86
 // #cgo linux,arm64 LDFLAGS: -lhdf5_arm64 -lhdf5_hl_arm64 -lsz_arm64
