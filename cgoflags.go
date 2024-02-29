@@ -4,12 +4,7 @@
 
 package hdf5
 
-// #cgo LDFLAGS: -lhdf5 -lhdf5_hl
-// #cgo darwin CFLAGS: -I/usr/local/include
-// #cgo darwin LDFLAGS: -L/usr/local/lib
-// #cgo linux,!arm64 CFLAGS: -I/usr/local/include, -I/usr/lib/x86_64-linux-gnu/hdf5/serial/include
-// #cgo linux,!arm64 LDFLAGS: -L/usr/local/lib, -L/usr/lib/x86_64-linux-gnu/hdf5/serial/
-// #cgo linux,arm64 CFLAGS: -I/usr/local/include, -I/usr/lib/aarch64-linux-gnu/hdf5/serial/include
-// #cgo linux,arm64 LDFLAGS: -L/usr/local/lib, -L/usr/lib/aarch64-linux-gnu/hdf5/serial/
+// #cgo LDFLAGS: -L/home/sintela/hdf5-1.14.3/hdf5/lib -lhdf5 -lhdf5_hl -L/home/sintela/szip-2.1.1/szip/lib -lsz -lz
+// #cgo CFLAGS: -I/home/sintela/hdf5-1.14.3/hdf5/include -I/home/sintela/szip-2.1.1/szip/include
 // #include "hdf5.h"
 import "C"
