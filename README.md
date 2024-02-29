@@ -30,3 +30,6 @@ Naive ``cgo`` bindings for the ``C-API`` of ``hdf5``.
 ## License
 
 Please see github.com/gonum/gonum for general license information, contributors, authors, etc on the Gonum suite of packages.
+
+## Sintela Build
+See https://sintela.atlassian.net/browse/SIN-15797 for notes on building 
