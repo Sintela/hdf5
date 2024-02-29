@@ -99,7 +99,7 @@ func PrintVersionInfo() {
 }
 
 // SetExtent grows the extent of a dataset - because the hdf5 library doesn't include it
-func SetExtent(d hdf5.Identifier, dims []uint) (err error) {
+func SetExtent(d Identifier, dims []uint) (err error) {
 	cDims := (*C.hsize_t)(unsafe.Pointer(&dims[0]))
 	rc := C.H5Dset_extent(C.hid_t(d.ID()), cDims)
 	e := C.herr_t(rc)
