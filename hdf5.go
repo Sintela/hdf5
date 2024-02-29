@@ -10,6 +10,7 @@ import "C"
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 // init initializes the hdf5 library
@@ -84,4 +85,26 @@ type Object interface {
 	Name() string
 	Id() int
 	File() *File
+}
+
+func PrintVersionInfo() {
+	var majNum, minNum, relNum int
+	err := C.H5get_libversion((*C.uint)(unsafe.Pointer(&majNum)), (*C.uint)(unsafe.Pointer(&minNum)), (*C.uint)(unsafe.Pointer(&relNum)))
+
+	if err == 0 {
+		fmt.Printf("HDF5 Library Version = %d.%d  Release %d\n", majNum, minNum, relNum)
+	} else {
+		fmt.Println("HDF5 Library Version : Error reading ")
+	}
+}
+
+// SetExtent grows the extent of a dataset - because the hdf5 library doesn't include it
+func SetExtent(d hdf5.Identifier, dims []uint) (err error) {
+	cDims := (*C.hsize_t)(unsafe.Pointer(&dims[0]))
+	rc := C.H5Dset_extent(C.hid_t(d.ID()), cDims)
+	e := C.herr_t(rc)
+	if e < 0 {
+		err = fmt.Errorf("HDF5 error in SetExtent %d", e)
+	}
+	return err
 }
