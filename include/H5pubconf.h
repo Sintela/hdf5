@@ -116,7 +116,9 @@
 #define H5_HAVE_FCNTL 1
 
 /* Define to 1 if you have the <features.h> header file. */
-// #define H5_HAVE_FEATURES_H 1
+#if !defined(__APPLE__)
+#define H5_HAVE_FEATURES_H 1
+#endif
 
 /* Define if support for deflate (zlib) filter is enabled */
 #define H5_HAVE_FILTER_DEFLATE 1
