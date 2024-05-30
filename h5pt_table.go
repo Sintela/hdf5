@@ -16,7 +16,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"gitlab.com/sintela/hdf5/cmem"
+	"github.com/sintela/hdf5/cmem"
 )
 
 // Table is an hdf5 packet-table.
