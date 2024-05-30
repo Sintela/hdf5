@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	"gitlab.com/sintela/hdf5"
+	"github.com/sintela/hdf5"
 )
 
 const (

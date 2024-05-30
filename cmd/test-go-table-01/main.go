@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"gitlab.com/sintela/hdf5"
+	"github.com/sintela/hdf5"
 )
 
 const (
