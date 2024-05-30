@@ -1,3 +1,3 @@
-module gitlab.com/sintela/hdf5
+module github.com/sintela/hdf5
 
 go 1.13
