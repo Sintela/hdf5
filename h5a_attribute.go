@@ -99,6 +99,7 @@ func (s *Attribute) Read(data interface{}, dtype *Datatype) error {
 		case C.H5Tis_variable_str(dtAttr.Identifier.id) != 0:
 			addr = unsafe.Pointer(&cstr)
 		default:
+			C.memset(unsafe.Pointer(cstr), 0, C.size_t(dlen+1))
 			addr = unsafe.Pointer(cstr)
 		}
 		defer func() {
