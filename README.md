@@ -31,16 +31,3 @@ Naive ``cgo`` bindings for the ``C-API`` of ``hdf5``.
 
 Please see github.com/gonum/gonum for general license information, contributors, authors, etc on the Gonum suite of packages.
 
-## Sintela Build
-See https://sintela.atlassian.net/browse/SIN-15797 for notes on building
-For Go tools to authenticate with Gitlab private repo:
-
- touch ~/.netrc
-
-chmod 600 ~/.netrc
-
-vi ~/.netrc
-
-Generate a personal access token (Personal access tokens | GitLab )
-
-machine  gitlab.com  login ‘username’ password ‘personal-access-token’
